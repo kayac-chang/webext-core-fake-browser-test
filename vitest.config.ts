@@ -7,5 +7,10 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: ["vitest.setup.ts"],
+    server: {
+      deps: {
+        inline: ["@webext-core/storage"],
+      },
+    },
   },
 });
